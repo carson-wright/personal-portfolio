@@ -46,11 +46,11 @@ module.exports = {
         externalLinks: [
           {
             name: `Discord`,
-            url: `https://twitter.com/lekoarts_de`,
+            url: `https://discord.gg/tfCnAxaYtR`,
           },
           {
             name: `Instagram`,
-            url: `https://www.instagram.com/lekoarts.de/`,
+            url: `https://www.instagram.com/carsonwrightdesign/`,
           },
         ],
       },
