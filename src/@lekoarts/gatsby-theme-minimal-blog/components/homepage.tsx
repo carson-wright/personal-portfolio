@@ -13,6 +13,8 @@ import { visuallyHidden } from "@lekoarts/gatsby-theme-minimal-blog/src/styles/u
 import Hero from "../texts/hero"
 // @ts-ignore
 import Bottom from "../texts/bottom"
+// @ts-ignore
+import Feature from "../texts/feature"
 
 type PostsProps = {
   posts: {
@@ -40,9 +42,13 @@ const Homepage = ({ posts }: PostsProps) => {
       <section sx={{ mb: [5, 6, 7], p: { fontSize: [1, 2, 3], mt: 2 }, variant: `section_hero` }}>
         <Hero />
       </section>
+
       <Title text="Featured Project">
-        <Link to={replaceSlashes(`/${basePath}/${blogPath}`)}>View Project</Link>
+        <Link to={replaceSlashes(`/${basePath}/projects`)}>View Project</Link>
       </Title>
+      <section sx={{ mb: [5, 6, 7], p: { fontSize: [1, 2, 3], mt: 2 }}}>
+      <Feature />
+      </ section>
       <Title text="Latest Posts">
         <Link to={replaceSlashes(`/${basePath}/${blogPath}`)}>Read all posts</Link>
       </Title>
