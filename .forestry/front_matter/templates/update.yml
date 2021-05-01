@@ -14,7 +14,7 @@ fields:
   description: The date field
   config:
     required: false
-    date_format: 
+    date_format: YYYY-MM-DD
     time_format: 
     display_utc: false
 - name: description
