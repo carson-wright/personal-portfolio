@@ -38,3 +38,5 @@ fields:
     maxSize: 64
   label: Banner
   description: The banner for the post
+pages:
+- content/posts/KBD2600 Update/kbd2600-update-may-1st.mdx
