@@ -2,10 +2,12 @@
 import { jsx, useColorMode } from "theme-ui"
 import { Flex } from "@theme-ui/components"
 import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
-import ColorModeToggle from "./colormode-toggle"
-import Navigation from "./navigation"
-import HeaderTitle from "./header-title"
-import HeaderExternalLinks from "./header-external-links"
+import ColorModeToggle from "@lekoarts/gatsby-theme-minimal-blog/src/components/colormode-toggle"
+import Navigation from "@lekoarts/gatsby-theme-minimal-blog/src/components/navigation"
+import HeaderTitle from "@lekoarts/gatsby-theme-minimal-blog/src/components/header-title"
+import HeaderExternalLinks from "@lekoarts/gatsby-theme-minimal-blog/src/components/header-external-links"
+
+import logo from "./logo.svg"
 
 const Header = () => {
   const { navigation: nav } = useMinimalBlogConfig()
@@ -22,6 +24,9 @@ const Header = () => {
         <HeaderTitle />
         <ColorModeToggle isDark={isDark} toggle={toggleColorMode} />
       </Flex>
+      <div style={{position: "absolute", top: "35px", right: "50%", transform: "translate(100%, 0)"}}>
+      <img style={{height: "80px"}} src={logo} />
+      </div>
       <div
         sx={{
           boxSizing: `border-box`,

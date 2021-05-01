@@ -16,8 +16,6 @@ import Bottom from "../texts/bottom"
 // @ts-ignore
 import Feature from "../texts/feature"
 
-import kbd2600 from "./kbd2600.jpg"
-
 type PostsProps = {
   posts: {
     slug: string
