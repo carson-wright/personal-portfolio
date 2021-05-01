@@ -38,3 +38,5 @@ fields:
     maxSize: 64
   label: Banner
   description: The banner for the post
+pages:
+- content/posts/project-updates-may1/project-updates-may-1st.mdx
