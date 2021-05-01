@@ -16,6 +16,8 @@ import Bottom from "../texts/bottom"
 // @ts-ignore
 import Feature from "../texts/feature"
 
+import kbd2600 from "./kbd2600.jpg"
+
 type PostsProps = {
   posts: {
     slug: string
@@ -43,7 +45,7 @@ const Homepage = ({ posts }: PostsProps) => {
         <Hero />
       </section>
 
-      <Title text="Featured Project">
+      <Title text="Featured Project - KBD2600">
         <Link to={replaceSlashes(`/${basePath}/projects`)}>View Project</Link>
       </Title>
       <section sx={{ mb: [5, 6, 7], p: { fontSize: [1, 2, 3], mt: 2 }}}>
