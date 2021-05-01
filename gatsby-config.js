@@ -6,17 +6,37 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
+    // Used for the title template on pages other than the index site
+    siteTitle: `Carson Wright`,
+    // Default title of the page
+    siteTitleAlt: `Carson Wright`,
+    // Can be used for e.g. JSONLD
+    siteHeadline: `Carson Wright - Designer and Keyboard Enthusiast`,
+    // Will be used to generate absolute URLs for og:image etc.
+    siteUrl: `https://carsonwright.me`,
+    // Used for SEO
+    siteDescription: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.`,
+    // Will be set on the <html /> tag
+    siteLanguage: `en`,
+    // Used for og:image and must be placed inside the `static` folder
+    siteImage: `/banner.jpg`,
+    // Twitter Handle
+    author: `@lekoarts_de`,
   },
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       // See the theme's README for all available options
       options: {
+        blogPath: `/updates`,
         navigation: [
           {
-            title: `Blog`,
-            slug: `/blog`,
+            title: `Updates`,
+            slug: `/updates`,
+          },
+          {
+            title: `Projects`,
+            slug: `/projects`,
           },
           {
             title: `About`,
@@ -25,7 +45,7 @@ module.exports = {
         ],
         externalLinks: [
           {
-            name: `Twitter`,
+            name: `Discord`,
             url: `https://twitter.com/lekoarts_de`,
           },
           {
