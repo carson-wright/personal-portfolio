@@ -1,0 +1,31 @@
+.logo {
+  height: 40px;
+}
+.logo_container {
+  position: absolute;
+  top: 13px;
+  left: 195px;
+
+}
+@media only screen and (min-width: 480px) {
+  .logo {
+    height: 70px;
+  }
+  .logo_container {
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    transform: translate(0, 0);
+  }
+}
+@media only screen and (min-width: 640px) {
+  .logo {
+    height: 80px;
+  }
+  .logo_container {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translate(0, 0);
+  }
+}

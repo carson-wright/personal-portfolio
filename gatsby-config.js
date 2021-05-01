@@ -15,13 +15,13 @@ module.exports = {
     // Will be used to generate absolute URLs for og:image etc.
     siteUrl: `https://carsonwright.me`,
     // Used for SEO
-    siteDescription: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.`,
+    siteDescription: `Hey I'm Carson and you've found the (temporary) home of all my mechanical keyboard projects. Here you'll find weekly status updates, general project information including where to purchase my work, and any documentation relating to my designs.`,
     // Will be set on the <html /> tag
     siteLanguage: `en`,
     // Used for og:image and must be placed inside the `static` folder
     siteImage: `/banner.jpg`,
     // Twitter Handle
-    author: `@lekoarts_de`,
+    author: `Carson Wright`,
   },
   plugins: [
     {
@@ -65,12 +65,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
-        short_name: `minimal-blog`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
+        name: `Carson Wright - Custom Keyboard Design`,
+        short_name: `Carson Wright`,
+        description: `Hey I'm Carson and you've found the (temporary) home of all my mechanical keyboard projects. Here you'll find weekly status updates, general project information including where to purchase my work, and any documentation relating to my designs.`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#6B46C1`,
+        theme_color: `#000000`,
         display: `standalone`,
         icons: [
           {

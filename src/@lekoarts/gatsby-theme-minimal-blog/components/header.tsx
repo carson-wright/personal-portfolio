@@ -7,6 +7,8 @@ import Navigation from "@lekoarts/gatsby-theme-minimal-blog/src/components/navig
 import HeaderTitle from "@lekoarts/gatsby-theme-minimal-blog/src/components/header-title"
 import HeaderExternalLinks from "@lekoarts/gatsby-theme-minimal-blog/src/components/header-external-links"
 
+import * as headerStyles from "./header.module.css"
+
 import logo from "./logo.svg"
 
 const Header = () => {
@@ -24,8 +26,8 @@ const Header = () => {
         <HeaderTitle />
         <ColorModeToggle isDark={isDark} toggle={toggleColorMode} />
       </Flex>
-      <div style={{position: "absolute", top: "35px", right: "50%", transform: "translate(100%, 0)"}}>
-      <img style={{height: "80px"}} src={logo} />
+      <div className={headerStyles.logo_container}>
+      <img className={headerStyles.logo} src={logo} />
       </div>
       <div
         sx={{
