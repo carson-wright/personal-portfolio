@@ -5,19 +5,23 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
+  path: content/posts
+  label: Updates
+  create: all
+  match: "**/*"
+  new_doc_ext: ".mdx"
+- type: directory
   path: content/pages
   label: Pages
   create: all
   match: "**/*"
-  new_doc_ext: ".mdx"
+  new_doc_ext: mdx
 - type: document
   path: src/@lekoarts/gatsby-theme-minimal-blog/texts/bottom.mdx
   label: Bottom Text
-  match: "**/*"
 - type: document
   path: src/@lekoarts/gatsby-theme-minimal-blog/texts/hero.mdx
   label: Hero Text
-  match: "**/*"
 - type: document
   path: src/@lekoarts/gatsby-theme-minimal-blog/texts/feature.mdx
   label: Featured Project
