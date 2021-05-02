@@ -4,12 +4,16 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: heading
+  label: Updates
 - type: directory
   path: content/posts
   label: Updates
   create: all
   match: "**/*"
   new_doc_ext: mdx
+- type: heading
+  label: Projects
 - type: directory
   path: content/pages
   label: Pages
