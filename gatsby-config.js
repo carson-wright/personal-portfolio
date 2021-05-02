@@ -86,6 +86,17 @@ module.exports = {
         ],
       },
     },
+    {
+            resolve: "gatsby-transformer-remark",
+            options: {
+                plugins: [
+                    // without options
+                    "gatsby-remark-normalize-paths"
+                    // or
+                    // with options
+                ],
+            },
+        },
     `gatsby-plugin-offline`,
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-netlify`,
