@@ -14,12 +14,6 @@ sections:
   new_doc_ext: mdx
 - type: heading
   label: Projects
-- type: directory
-  path: content/pages
-  label: Pages
-  create: all
-  match: "**/*"
-  new_doc_ext: mdx
 - type: heading
   label: Front Page Settings
 - type: document
@@ -31,6 +25,14 @@ sections:
 - type: document
   path: src/@lekoarts/gatsby-theme-minimal-blog/texts/feature.mdx
   label: Featured Project
+- type: heading
+  label: Other
+- type: directory
+  path: content/pages
+  label: Pages
+  create: all
+  match: "**/*"
+  new_doc_ext: mdx
 upload_dir: static/uploads
 public_path: "/static/uploads"
 front_matter_path: ''
