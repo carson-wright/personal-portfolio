@@ -33,20 +33,21 @@ sections:
   label: Policies
 - type: heading
   label: Resources
+- type: document
+  path: content/pages/resources/docs/index.mdx
+  label: Docs
+  match: "**/*"
 - type: heading
   label: Info
 - type: document
   path: content/pages/about/index.mdx
   label: About
-  match: "**/*"
 - type: document
   path: content/pages/contact/contact/index.mdx
   label: Contact
-  match: "**/*"
 - type: document
   path: content/pages/contact/email-updates/index.mdx
   label: Newsletter
-  match: "**/*"
 - type: heading
   label: Front Page Settings
 - type: document
@@ -69,7 +70,6 @@ sections:
 - type: document
   path: content/pages/links/index.mdx
   label: Links
-  match: "**/*"
 upload_dir: static/uploads
 public_path: "/static/uploads"
 front_matter_path: ''
