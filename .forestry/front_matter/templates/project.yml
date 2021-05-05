@@ -1,4 +1,10 @@
 ---
 label: Project
 hide_body: false
-fields: []
+fields:
+- name: name
+  type: text
+  config:
+    required: false
+  label: Project Name
+  description: The name of the project
