@@ -43,6 +43,10 @@ sections:
   path: content/pages/contact/contact/index.mdx
   label: Contact
   match: "**/*"
+- type: document
+  path: content/pages/contact/email-updates/index.mdx
+  label: Newsletter
+  match: "**/*"
 - type: heading
   label: Front Page Settings
 - type: document
