@@ -30,6 +30,10 @@ sections:
 - type: heading
   label: Catalog
 - type: heading
+  label: Policies
+- type: heading
+  label: Resources
+- type: heading
   label: Front Page Settings
 - type: document
   path: src/@lekoarts/gatsby-theme-minimal-blog/texts/bottom.mdx
