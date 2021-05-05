@@ -54,6 +54,10 @@ sections:
   create: all
   match: "**/*"
   new_doc_ext: mdx
+- type: document
+  path: content/pages/links/index.mdx
+  label: Links
+  match: "**/*"
 upload_dir: static/uploads
 public_path: "/static/uploads"
 front_matter_path: ''
