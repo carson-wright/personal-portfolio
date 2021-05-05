@@ -4,6 +4,10 @@ auto_deploy: false
 admin_path: "/static"
 webhook_url: 
 sections:
+- type: document
+  path: content/pages/resources/files/index.mdx
+  label: Files
+  match: "**/*"
 - type: heading
   label: Updates
 - type: directory
@@ -36,7 +40,6 @@ sections:
 - type: document
   path: content/pages/resources/docs/index.mdx
   label: Docs
-  match: "**/*"
 - type: heading
   label: Info
 - type: document
