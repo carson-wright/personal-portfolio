@@ -19,15 +19,16 @@ sections:
 - type: document
   path: content/pages/projects/index.mdx
   label: Project Page
-  match: "**/*"
 - type: directory
   path: content/pages/projects
   label: Projects
   create: all
   match: "**/*"
-  new_doc_ext: ".mdx"
+  new_doc_ext: mdx
   templates:
   - project
+- type: heading
+  label: Catalog
 - type: heading
   label: Front Page Settings
 - type: document
