@@ -12,8 +12,18 @@ sections:
   create: all
   match: "**/*"
   new_doc_ext: mdx
+  templates:
+  - update
 - type: heading
   label: Projects
+- type: directory
+  path: content/pages/projects
+  label: Projects
+  create: all
+  match: "**/*"
+  new_doc_ext: ".mdx"
+  templates:
+  - project
 - type: heading
   label: Front Page Settings
 - type: document
