@@ -16,6 +16,10 @@ sections:
   - update
 - type: heading
   label: Projects
+- type: document
+  path: content/pages/projects/index.mdx
+  label: Project Page
+  match: "**/*"
 - type: directory
   path: content/pages/projects
   label: Projects
