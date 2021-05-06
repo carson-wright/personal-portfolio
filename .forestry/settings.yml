@@ -87,6 +87,11 @@ sections:
 - type: document
   path: content/pages/links/index.mdx
   label: Links
+- type: directory
+  path: content/pages/interest-checks
+  label: Interest Checks
+  create: all
+  match: "**/*"
 upload_dir: static/uploads
 public_path: "/static/uploads"
 front_matter_path: ''
