@@ -32,7 +32,6 @@ sections:
 - type: document
   path: content/pages/catalog/index.mdx
   label: Catalog Page
-  match: "**/*"
 - type: heading
   label: Policies
 - type: document
