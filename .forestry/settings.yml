@@ -29,6 +29,10 @@ sections:
   - project
 - type: heading
   label: Catalog
+- type: document
+  path: content/pages/catalog/index.mdx
+  label: Catalog Page
+  match: "**/*"
 - type: heading
   label: Policies
 - type: document
@@ -37,7 +41,6 @@ sections:
 - type: document
   path: content/pages/policies/environmental-impact/index.mdx
   label: Environmental Impact
-  match: "**/*"
 - type: document
   path: content/pages/policies/quality-disclosure/index.mdx
   label: Quality Dislosure
