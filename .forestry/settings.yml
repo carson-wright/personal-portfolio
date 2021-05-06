@@ -34,6 +34,13 @@ sections:
 - type: document
   path: content/pages/policies/manufacturing/index.mdx
   label: Manufacturing
+- type: document
+  path: content/pages/policies/quality-disclosure/index.mdx
+  label: Quality Dislosure
+  match: "**/*"
+- type: document
+  path: content/pages/policies/returns-and-refunds/index.mdx
+  label: Returns and Refunds
   match: "**/*"
 - type: heading
   label: Resources
