@@ -51,7 +51,6 @@ fields:
     required: false
   label: Cannonical URL
 pages:
-- content/posts/project-updates-may-29th.mdx
 - content/posts/project-updates-may1/project-updates-may-1st.mdx
 - content/posts/project-updates-may22/project-updates-may-22nd.mdx
 - content/posts/project-updates-may8/project-updates-may-8th.mdx
