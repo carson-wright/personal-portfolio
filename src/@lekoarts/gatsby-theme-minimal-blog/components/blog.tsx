@@ -43,7 +43,9 @@ const Blog = ({ posts }: PostsProps) => {
         </TLink>
       </Flex>
 
-      <p sx={{ mb: [5, 6, 7], p: { fontSize: [1, 2, 3], mt: 2 }}} >  Project updates are released every Saturday @5:00 PM Pacific Time </p>
+      <div sx={{ p: { fontSize: [1, 2, 3]}}} >
+      <p>Project updates are released every Saturday @5:00 PM Pacific Time</p>
+      </div>
 
       <Listing posts={posts} sx={{ mt: [4, 5] }} />
     </Layout>
