@@ -15,6 +15,8 @@ import Hero from "../texts/hero"
 import Bottom from "../texts/bottom"
 // @ts-ignore
 import Feature from "../texts/feature"
+// @ts-ignore
+import Other from "../texts/other"
 
 type PostsProps = {
   posts: {
@@ -49,8 +51,8 @@ const Homepage = ({ posts }: PostsProps) => {
       <section sx={{ mb: [5, 6, 7], p: { fontSize: [1, 2, 3], mt: 2 }}}>
       <Feature />
       </ section>
-      <Title text="Latest Posts">
-        <Link to={replaceSlashes(`/${basePath}/${blogPath}`)}>Read all posts</Link>
+      <Title text="Latest Updates 📣">
+        <Link to={replaceSlashes(`/${basePath}/${blogPath}`)}>Read all updates</Link>
       </Title>
       <Listing posts={posts} showTags={false} />
       <List sx={{ variant: `section_bottom` }}>

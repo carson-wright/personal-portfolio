@@ -25,16 +25,14 @@ const Footer = () => {
       </div>
       <div>
         <Link
-          aria-label="Link to the theme's GitHub repository"
-          href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-minimal-blog"
+          aria-label="Link to the site status page"
+          href="https://status.carsonwright.me"
+          sx={{marginRight:"15px"}}
         >
-          Theme
+          Status
         </Link>
-        {` `}
-        by
-        {` `}
-        <Link aria-label="Link to the theme author's website" href="https://www.lekoarts.de/en">
-          LekoArts
+        <Link aria-label="Link to the partner repository" href="https://projects.carsonwright.me">
+          Partners
         </Link>
       </div>
     </footer>

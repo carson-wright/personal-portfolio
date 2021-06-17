@@ -32,7 +32,7 @@ const Blog = ({ posts }: PostsProps) => {
       <SEO title="Updates" />
       <Flex sx={{ alignItems: `center`, justifyContent: `space-between`, flexFlow: `wrap` }}>
         <Heading as="h1" variant="styles.h1" sx={{ marginY: 2 }}>
-          Updates
+          Updates 📣
         </Heading>
         <TLink
           as={Link}
