@@ -45,8 +45,8 @@ const Homepage = ({ posts }: PostsProps) => {
         <Hero />
       </section>
 
-      <Title text="Featured Project - KBD2600">
-        <Link to={replaceSlashes(`/${basePath}/projects`)}>View Project</Link>
+      <Title text="Featured Project">
+        <Link to={replaceSlashes(`/${basePath}/projects`)}>View All Projects</Link>
       </Title>
       <section sx={{ mb: [5, 6, 7], p: { fontSize: [1, 2, 3], mt: 2 }}}>
       <Feature />
