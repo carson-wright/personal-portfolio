@@ -31,6 +31,13 @@ const Footer = () => {
         >
           Status
         </Link>
+        <Link
+          aria-label="Link to the site admin page"
+          href="https://admin.carsonwright.me"
+          sx={{marginRight:"15px"}}
+        >
+          Admin
+        </Link>
         <Link aria-label="Link to the partner repository" href="https://projects.carsonwright.me">
           Partners
         </Link>

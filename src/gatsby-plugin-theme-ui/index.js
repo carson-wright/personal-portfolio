@@ -6,7 +6,7 @@ const theme = merge(tailwind, {
   initialColorModeName: `light`,
   useCustomProperties: true,
   colors: {
-    primary: tailwind.colors.gray[4],
+    primary: '#FFC83D',
     secondary: `#5f6c80`,
     toggleIcon: tailwind.colors.gray[8],
     heading: tailwind.colors.black,
@@ -14,7 +14,7 @@ const theme = merge(tailwind, {
     modes: {
       dark: {
         text: tailwind.colors.gray[4],
-        primary: tailwind.colors.gray[4],
+        primary: '#FFC83D',
         secondary: `#7f8ea3`,
         toggleIcon: tailwind.colors.gray[4],
         background: `#111216`,
