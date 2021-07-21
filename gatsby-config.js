@@ -15,7 +15,7 @@ module.exports = {
     // Will be used to generate absolute URLs for og:image etc.
     siteUrl: `https://carsonwright.me`,
     // Used for SEO
-    siteDescription: `Hey I'm Carson and you've found the (temporary) home of all my mechanical keyboard projects. Here you'll find weekly status updates, general project information including where to purchase my work, and any documentation relating to my designs.`,
+    siteDescription: `Hey I'm Carson and you've found the home of all my mechanical keyboard projects. Here you'll find weekly status updates, general project information including where to purchase my work, and any documentation relating to my designs.`,
     // Will be set on the <html /> tag
     siteLanguage: `en`,
     // Used for og:image and must be placed inside the `static` folder
@@ -39,8 +39,8 @@ module.exports = {
             slug: `/projects`,
           },
           {
-            title: `About`,
-            slug: `/about`,
+            title: `Store`,
+            slug: `https://store.carsonwright.me`,
           },
         ],
         externalLinks: [
