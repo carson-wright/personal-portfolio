@@ -38,12 +38,12 @@ module.exports = {
             title: `Projects`,
             slug: `/projects`,
           },
-          {
-            title: `Store`,
-            slug: `https://store.carsonwright.me`,
-          },
         ],
         externalLinks: [
+          {
+            name: `Store`,
+            url: `https://store.carsonwright.me`,
+          },
           {
             name: `Discord`,
             url: `https://discord.gg/tfCnAxaYtR`,
