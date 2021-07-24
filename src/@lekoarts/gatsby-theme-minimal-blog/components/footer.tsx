@@ -38,8 +38,8 @@ const Footer = () => {
         >
           Admin
         </Link>
-        <Link aria-label="Link to the partner repository" href="https://projects.carsonwright.me">
-          Partners
+        <Link aria-label="Link to the site analytics" href="https://analytics.carsonwright.me">
+          Analytics
         </Link>
       </div>
     </footer>
