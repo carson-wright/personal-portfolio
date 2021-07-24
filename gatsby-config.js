@@ -40,7 +40,7 @@ module.exports = {
           },
           {
             title: `Store`,
-            slug: `/about`,
+            slug: `https://store.carsonwright.me`,
           },
         ],
         externalLinks: [
