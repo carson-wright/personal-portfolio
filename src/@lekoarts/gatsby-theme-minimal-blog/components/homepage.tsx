@@ -60,9 +60,11 @@ const Homepage = ({ posts }: PostsProps) => {
       </List>
     </Layout>
     <>
-    <noscript>
-    <img src="https://example.com/ingress/5d4b63af-16b9-4b75-884f-b081a22c0807/pixel.gif">
-    </noscript>
+      <>
+      <noscript>
+        <img src="https://example.com/ingress/5d4b63af-16b9-4b75-884f-b081a22c0807/pixel.gif">
+      </noscript>
+      </>
     <script defer src="https://example.com/ingress/5d4b63af-16b9-4b75-884f-b081a22c0807/script.js"></script>
     </>
   )
