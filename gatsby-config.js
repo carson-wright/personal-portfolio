@@ -98,7 +98,6 @@ module.exports = {
             },
         },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-netlify`,
     shouldAnalyseBundle && {
