@@ -6,7 +6,7 @@ import Layout from "./layout"
 import Listing from "./listing"
 import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
 import replaceSlashes from "../utils/replaceSlashes"
-import SEO from ".seo"
+import SEO from "./seo"
 
 type PostsProps = {
   posts: {
