@@ -1,14 +1,14 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import { Link } from "gatsby"
-import Layout from "@lekoarts/gatsby-theme-minimal-blog/src/components/layout"
-import Title from "@lekoarts/gatsby-theme-minimal-blog/src/components/title"
-import Listing from "@lekoarts/gatsby-theme-minimal-blog/src/components/listing"
-import List from "@lekoarts/gatsby-theme-minimal-blog/src/components/list"
+import Layout from "./layout"
+import Title from "./title"
+import Listing from "./listing"
+import List from "./list"
 import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
 import useSiteMetadata from "../hooks/use-site-metadata"
-import replaceSlashes from "@lekoarts/gatsby-theme-minimal-blog/src/utils/replaceSlashes"
-import { visuallyHidden } from "@lekoarts/gatsby-theme-minimal-blog/src/styles/utils"
+import replaceSlashes from "../utils/replaceSlashes"
+import { visuallyHidden } from "../styles/utils"
 // @ts-ignore
 import Hero from "../texts/hero"
 // @ts-ignore

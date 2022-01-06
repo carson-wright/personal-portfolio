@@ -2,10 +2,10 @@
 import { jsx, useColorMode } from "theme-ui"
 import { Flex } from "@theme-ui/components"
 import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
-import ColorModeToggle from "@lekoarts/gatsby-theme-minimal-blog/src/components/colormode-toggle"
+import ColorModeToggle from "./colormode-toggle"
 import Navigation from "./navigation"
-import HeaderTitle from "@lekoarts/gatsby-theme-minimal-blog/src/components/header-title"
-import HeaderExternalLinks from "@lekoarts/gatsby-theme-minimal-blog/src/components/header-external-links"
+import HeaderTitle from "./header-title"
+import HeaderExternalLinks from "./header-external-links"
 
 import * as headerStyles from "./header.module.css"
 
