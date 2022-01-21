@@ -38,6 +38,10 @@ module.exports = {
             title: `Projects`,
             slug: `/projects`,
           },
+          {
+            title: `Products`,
+            slug: `/products`,
+          }
         ],
         externalLinks: [
           {
@@ -53,6 +57,13 @@ module.exports = {
             url: `https://www.instagram.com/carsonwrightdesign/`,
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "products-pages",
+        path: "./content/products"
       },
     },
     {
