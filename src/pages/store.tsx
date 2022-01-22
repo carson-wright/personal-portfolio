@@ -18,7 +18,7 @@ interface IProductsQuery {
 	}
 }
 
-export default function Products() {
+export default function Store() {
 	const queryResult: IProductsQuery = useStaticQuery(graphql`query Products {
 	allMdx(sort: {fields: frontmatter___date, order: DESC}, filter: {frontmatter: {date: {ne: null}}}) {
 		nodes {
@@ -38,10 +38,10 @@ export default function Products() {
 
 	return (
 		<Layout>
-			<SEO title="Products" />
+			<SEO title="Store" />
 			<Flex sx={{ alignItems: `center`, justifyContent: `space-between`, flexFlow: `wrap` }}>
 				<Heading as="h1" variant="styles.h1" sx={{ marginY: 2 }}>
-					Products
+					Store
 				</Heading>
 			</Flex>
 
