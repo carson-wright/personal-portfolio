@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Heading } from "theme-ui"
+import { jsx, Heading, Link as TLink } from "theme-ui"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { Flex } from "@theme-ui/components"
 import Layout from "@lekoarts/gatsby-theme-minimal-blog/src/components/layout"
@@ -32,8 +32,6 @@ export default function Products() {
 	}
 }`)
 
-	console.log(queryResult)
-
 	const products = queryResult.allMdx.nodes.filter(v => v.frontmatter.slug.startsWith("/products/")).map((v) => {
 		return <Listing key={v.id} title={v.frontmatter.title} date={v.frontmatter.date} slug={v.frontmatter.slug} />
 	})
@@ -46,10 +44,6 @@ export default function Products() {
 					Products
 				</Heading>
 			</Flex>
-
-			{/* <div sx={{ p: { fontSize: [1, 2, 3] } }} >
-				<p>Project updates are released every Sunday @5:00 PM Pacific Time</p>
-			</div> */}
 
 			{products}
 		</Layout>
@@ -64,7 +58,10 @@ interface IListingProps {
 
 function Listing(props: IListingProps) {
 	return <div>
-		<Link to={props.slug}><h2>{props.title}</h2></Link>
-		<h4>{props.date}</h4>
+		<TLink as={Link} to={props.slug} sx={{ fontSize: [1, 2, 3], color: `text` }}>{props.title}</TLink>
+
+		<p sx={{ color: `secondary`, mt: 1, a: { color: `secondary` }, fontSize: [1, 1, 2] }}>
+			<time>{props.date}</time>
+		</p>
 	</div>
 }
