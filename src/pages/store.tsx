@@ -32,7 +32,7 @@ export default function Store() {
 	}
 }`)
 
-	const products = queryResult.allMdx.nodes.filter(v => v.frontmatter.slug.startsWith("/products/")).map((v) => {
+	const products = queryResult.allMdx.nodes.filter(v => v.frontmatter.slug.startsWith("/store/")).map((v) => {
 		return <Listing key={v.id} title={v.frontmatter.title} date={v.frontmatter.date} slug={v.frontmatter.slug} />
 	})
 
