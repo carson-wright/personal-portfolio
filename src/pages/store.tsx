@@ -5,13 +5,15 @@ import { Flex } from "@theme-ui/components"
 import Layout from "@lekoarts/gatsby-theme-minimal-blog/src/components/layout"
 import SEO from "@lekoarts/gatsby-theme-minimal-blog/src/components/seo"
 
+import "./store.css"
+
 interface IProductsQuery {
 	allMdx: {
 		nodes: Array<{
 			frontmatter: {
 				slug: string
 				title: string
-				date: string
+				status: string
 			}
 			id: string
 		}>
@@ -20,7 +22,7 @@ interface IProductsQuery {
 
 export default function Store() {
 	const queryResult: IProductsQuery = useStaticQuery(graphql`query Products {
-	allMdx(sort: {fields: frontmatter___date, order: DESC}, filter: {frontmatter: {date: {ne: null}}}) {
+	allMdx {
 		nodes {
 			frontmatter {
 				slug
@@ -33,7 +35,7 @@ export default function Store() {
 }`)
 
 	const products = queryResult.allMdx.nodes.filter(v => v.frontmatter.slug.startsWith("/store/")).map((v) => {
-		return <Listing key={v.id} title={v.frontmatter.title} date={v.frontmatter.date} slug={v.frontmatter.slug} />
+		return <Listing key={v.id} title={v.frontmatter.title} slug={v.frontmatter.slug} />
 	})
 
 	return (
@@ -45,23 +47,26 @@ export default function Store() {
 				</Heading>
 			</Flex>
 
-			{products}
+			<Grid>
+				{products}
+			</Grid>
 		</Layout>
 	)
 }
 
 interface IListingProps {
 	title: string
-	date: string
 	slug: string
 }
 
 function Listing(props: IListingProps) {
-	return <div>
+	return <div style={{ "textAlign": "center", "margin": "0.5rem" }}>
 		<TLink as={Link} to={props.slug} sx={{ fontSize: [1, 2, 3], color: `text` }}>{props.title}</TLink>
+	</div>
+}
 
-		<p sx={{ color: `secondary`, mt: 1, a: { color: `secondary` }, fontSize: [1, 1, 2] }}>
-			<time>{props.date}</time>
-		</p>
+function Grid(props: { children: React.ReactNode }) {
+	return <div className="productGrid">
+		{props.children}
 	</div>
 }
