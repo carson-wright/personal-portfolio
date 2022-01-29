@@ -1,8 +1,8 @@
 require(`dotenv`).config({
   path: `.env`,
-})
+});
 
-const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
+const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE;
 
 module.exports = {
   siteMetadata: {
@@ -41,7 +41,7 @@ module.exports = {
           {
             title: `Store`,
             slug: `/store`,
-          }
+          },
         ],
         externalLinks: [
           {
@@ -63,7 +63,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: "products-pages",
-        path: "./content/products"
+        path: "./content/products",
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "project-info",
+        path: "./content/projects",
       },
     },
     {
@@ -98,16 +105,16 @@ module.exports = {
       },
     },
     {
-            resolve: "gatsby-transformer-remark",
-            options: {
-                plugins: [
-                    // without options
-                    "gatsby-remark-normalize-paths"
-                    // or
-                    // with options
-                ],
-            },
-        },
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          // without options
+          "gatsby-remark-normalize-paths",
+          // or
+          // with options
+        ],
+      },
+    },
     `gatsby-plugin-offline`,
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-netlify`,
@@ -120,4 +127,4 @@ module.exports = {
       },
     },
   ].filter(Boolean),
-}
+};
