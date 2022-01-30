@@ -39,12 +39,12 @@ const Blog = ({ posts }: PostsProps) => {
           sx={{ variant: `links.secondary`, marginY: 2 }}
           to={replaceSlashes(`/${basePath}/${tagsPath}`)}
         >
-          View all tags
+          View all updates by project
         </TLink>
       </Flex>
 
-      <div sx={{ p: { fontSize: [1, 2, 3]}}} >
-      <p>Project updates are released every Sunday @5:00 PM Pacific Time</p>
+      <div sx={{ p: { fontSize: [1, 2, 3] } }} >
+        <p>Project updates are released every Sunday @5:00 PM Pacific Time</p>
       </div>
 
       <Listing posts={posts} sx={{ mt: [4, 5] }} />
