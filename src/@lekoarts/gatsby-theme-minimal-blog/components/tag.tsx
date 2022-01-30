@@ -7,7 +7,7 @@ import Layout from "@lekoarts/gatsby-theme-minimal-blog/src/components/layout"
 import Listing from "@lekoarts/gatsby-theme-minimal-blog/src/components/listing"
 import SEO from "@lekoarts/gatsby-theme-minimal-blog/src/components/seo"
 
-interface TagProps {
+interface ProjectProps {
 	posts: {
 		slug: string
 		title: string
@@ -40,7 +40,15 @@ interface IProjectQuery {
 	}
 }
 
-export default function Tag({ posts, pageContext }: TagProps) {
+/**
+ * Project is a functional React component placed in tag.tsx
+ * to shadow the original Tag template page provided by the template this
+ * project is based on.
+ *
+ * @param projectProps The posts associated with the project and the context surrounding the page's creation.
+ * @returns A renderable React component.
+ */
+export default function Project({ posts, pageContext }: ProjectProps) {
 	const queryResult: IProjectQuery = useStaticQuery(graphql`query ProjectsPage {
 		allMdx {
 		  nodes {
