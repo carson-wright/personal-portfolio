@@ -29,6 +29,7 @@ module.exports = {
       // See the theme's README for all available options
       options: {
         blogPath: `/updates`,
+        tagsPath: `/projects`,
         navigation: [
           {
             title: `Updates`,
