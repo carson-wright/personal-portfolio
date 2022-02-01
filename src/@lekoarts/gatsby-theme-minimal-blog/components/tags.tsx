@@ -68,7 +68,7 @@ export default function Projects({ list }: PostsProps) {
 							</Link>
 						</Flex>
 						{<p sx={{ color: `secondary`, mt: 0.5, a: { color: `secondary` }, fontSize: [1, 1, 2] }}>
-							{filtered !== undefined && filtered.length > 0 ? filtered[0].frontmatter.description : "No description provided."}
+							{filtered !== undefined && filtered.length > 0 ? filtered[0].frontmatter.description : null}
 						</p>}
 					</div>
 				})}
