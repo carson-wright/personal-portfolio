@@ -2,7 +2,7 @@
 import { jsx, Heading, Box, Flex } from "theme-ui"
 // @ts-ignore
 import kebabCase from "lodash.kebabcase"
-import { Link } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Layout from "@lekoarts/gatsby-theme-minimal-blog/src/components/layout"
 import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
 import SEO from "@lekoarts/gatsby-theme-minimal-blog/src/components/seo"
@@ -15,6 +15,18 @@ interface PostsProps {
 	}[]
 }
 
+interface IProjectsQuery {
+	allMdx: {
+		nodes: Array<{
+			frontmatter: {
+				title: string
+				description: string
+			}
+			id: string
+		}>
+	}
+}
+
 /**
  * Projects is a functional React component placed in tags.tsx
  * to shadow the original Tags page provided by the template this
@@ -25,6 +37,17 @@ interface PostsProps {
  */
 export default function Projects({ list }: PostsProps) {
 	const { tagsPath, basePath } = useMinimalBlogConfig()
+	const queryResult: IProjectsQuery = useStaticQuery(graphql`query ProjectDescriptions {
+		allMdx {
+		  nodes {
+			frontmatter {
+			  title
+			  description
+			}
+			id
+		  }
+		}
+	  }`)
 
 	return (
 		<Layout>
@@ -32,8 +55,10 @@ export default function Projects({ list }: PostsProps) {
 			<Heading as="h1" variant="styles.h1">Projects</Heading>
 
 			<Box mt={[4, 5]}>
-				{list.map((listItem) => (
-					<div>
+				{list.map((listItem) => {
+					const filtered = queryResult.allMdx.nodes.filter((value) => value.frontmatter.title === listItem.fieldValue)
+
+					return <div>
 						<Flex key={listItem.fieldValue} mt={3} mb={0.5} sx={{ alignItems: `center` }}>
 							<Link
 								sx={(t) => ({ ...t.styles?.a, variant: `links.listItem`, mr: 2 })}
@@ -43,10 +68,10 @@ export default function Projects({ list }: PostsProps) {
 							</Link>
 						</Flex>
 						{<p sx={{ color: `secondary`, mt: 0.5, a: { color: `secondary` }, fontSize: [1, 1, 2] }}>
-							No description provided.
+							{filtered !== undefined && filtered.length > 0 ? filtered[0].frontmatter.description : "No description provided."}
 						</p>}
 					</div>
-				))}
+				})}
 			</Box>
 		</Layout>
 	)
