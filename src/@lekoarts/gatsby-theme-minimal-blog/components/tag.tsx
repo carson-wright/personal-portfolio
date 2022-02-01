@@ -76,7 +76,9 @@ export default function Project({ posts, pageContext }: ProjectProps) {
 
 			<Divider sx={{ variant: "dividers.top", backgroundColor: "#00000000" }} />
 
-			<Listing posts={posts} sx={{ mt: [4, 5] }} />
+			<Heading as="h4" variant="styles.h4">Updates Featuring This Project</Heading>
+
+			<Listing posts={posts} sx={{ mt: [1, 3] }} />
 		</Layout>
 	)
 }
