@@ -1,5 +1,5 @@
-import * as React from "react"
-import { Heading } from "theme-ui"
+/** @jsx jsx */
+import { Divider, Heading, jsx } from "theme-ui"
 import { Flex } from "@theme-ui/components"
 import { useStaticQuery, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -74,7 +74,7 @@ export default function Project({ posts, pageContext }: ProjectProps) {
 			{/* Only show the mdx body if we successfully found it. */}
 			{filtered.length === 0 ? null : <MDXRenderer>{filtered[0].body}</MDXRenderer>}
 
-			<hr />
+			<Divider sx={{ variant: "dividers.top", backgroundColor: "#00000000" }} />
 
 			<Listing posts={posts} sx={{ mt: [4, 5] }} />
 		</Layout>
