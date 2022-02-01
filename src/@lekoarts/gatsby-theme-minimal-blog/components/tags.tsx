@@ -33,14 +33,19 @@ export default function Projects({ list }: PostsProps) {
 
 			<Box mt={[4, 5]}>
 				{list.map((listItem) => (
-					<Flex key={listItem.fieldValue} mb={[1, 1, 2]} sx={{ alignItems: `center` }}>
-						<Link
-							sx={(t) => ({ ...t.styles?.a, variant: `links.listItem`, mr: 2 })}
-							to={replaceSlashes(`/${basePath}/${tagsPath}/${kebabCase(listItem.fieldValue)}`)}
-						>
-							{listItem.fieldValue} <span sx={{ color: `secondary` }}>({listItem.totalCount})</span>
-						</Link>
-					</Flex>
+					<div>
+						<Flex key={listItem.fieldValue} mt={3} mb={0.5} sx={{ alignItems: `center` }}>
+							<Link
+								sx={(t) => ({ ...t.styles?.a, variant: `links.listItem`, mr: 2 })}
+								to={replaceSlashes(`/${basePath}/${tagsPath}/${kebabCase(listItem.fieldValue)}`)}
+							>
+								{listItem.fieldValue}
+							</Link>
+						</Flex>
+						{<p sx={{ color: `secondary`, mt: 0.5, a: { color: `secondary` }, fontSize: [1, 1, 2] }}>
+							No description provided.
+						</p>}
+					</div>
 				))}
 			</Box>
 		</Layout>
